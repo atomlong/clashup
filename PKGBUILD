@@ -1,7 +1,7 @@
 # Maintainer: Tang Yuming <felinae225@qq.com>
 pkgname=clashup
 pkgver=0.3.0
-pkgrel=2
+pkgrel=3
 pkgdesc="auto update clash's config file"
 license=('GPL')
 arch=('any')
@@ -9,7 +9,8 @@ url="https://github.com/felinae98/clashup"
 depends=(python
          clash
          python-requests
-         python-daemon)
+         python-daemon
+		 python-yaml)
 source=(clashup clashup.conf clashup.service clashup.timer)
 package() {
     install -Dm755 clashup ${pkgdir}/usr/bin/clashup
