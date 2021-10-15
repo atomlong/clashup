@@ -4,6 +4,7 @@ After=network-online.target
 Description=Update clash config file
 
 [Service]
+ExecStartPre=/usr/bin/mkdir -p /root/.cache/
 ExecStart=/usr/bin/clashup --update
 ExecStopPost=/usr/bin/systemctl restart clash@root
 Type=oneshot
